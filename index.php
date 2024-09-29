@@ -20,14 +20,17 @@ foreach ($films as $name => $film) { // виводимо масив
 }
 function year($a, $b)
 { // callback-функція, яка визначає спосіб сортування (по рокам)
-    if ($a[1] < $b[1]) {
-        return -1;
-    } elseif ($a[1] == $b[1]) {
-        return 0;
-    } else {
-        return 1;
-    }
+    // if ($a[1] < $b[1]) {
+    //     return -1;
+    // } elseif ($a[1] == $b[1]) {
+    //     return 0;
+    // } else {
+    //     return 1;
+    // }
 
+
+
+    if($a[1]<=>$b[1]);
 }
 echo "Сортування за роком" . '<br>';
 uasort($films, "year");
@@ -52,4 +55,4 @@ foreach ($films as $name => $film) { // виводимо масив
     echo "$film[0]: \"$name\", $film[1]\n" . '<br>';
 }
 
-array_walk($films, 'author', 'year');
+// array_walk($films, 'author', 'year');
